@@ -1,6 +1,7 @@
 PATH_CSS = ./docs/css
 PATH_STYLUS = ./stylus
 ARKUI_STYLUS = ./stylus/arkui.styl
+PATH_TMPL = ./docs/templates
 
 DATE = $(shell date +%I:%M%p) 
 
