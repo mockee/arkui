@@ -1,0 +1,40 @@
+/**
+ * Copied from nib:
+ * https://github.com/visionmedia/nib/blob/master/lib/nib/vendor.styl
+ */
+
+vendor-prefixes ?= webkit moz o ms official
+
+vendor(prop, args, only = null, ignore = null)
+  for prefix in vendor-prefixes
+    unless (only and !(prefix in only)) or (ignore and prefix in ignore)
+      if official == prefix
+        {prop}: args
+      else
+        {'-' + prefix + '-' + prop}: args
+
+
+
+border-radius()
+  vendor('border-radius', arguments, only: webkit official)
+
+border-top-left-radius()
+  vendor('border-top-left-radius', arguments, only: webkit official)
+
+border-top-right-radius()
+  vendor('border-top-right-radius', arguments, only: webkit official)
+
+border-bottom-left-radius()
+  vendor('border-bottom-left-radius', arguments, only: webkit official)
+
+border-bottom-right-radius()
+  vendor('border-bottom-right-radius', arguments, only: webkit official)
+
+
+/**
+ * Actually there's a CSS3 "Backgrounds and Borders Module" containing all
+ * the specs of B&B and box-shadow.
+ */
+
+box-shadow()
+  vendor('box-shadow', arguments, only: webkit official)
