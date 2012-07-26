@@ -1,19 +1,24 @@
 .btn
 .btn:hover
+  display: inline-block
+  *display: inline
+  *zoom: 1
   font-size: 13px
   color: white
-  background-color: #6e3939
   padding: 4px 12px
+  margin-bottom: 0
   line-height: 1.1
+  background-color: #6e3939
   border: 1px solid #6e3939
   border-radius: 3px
   cursor: pointer
+  vertical-align: middle
   text-decoration: none
 
 .btn-info
 .btn-info:hover
   color: #6e3939
-  border: 1px solid #d3d3cc
+  border-color: #d3d3cc
   background-color: #e5e5dd
 
 .btn-info:hover
@@ -22,15 +27,28 @@
 .btn-minor
 .btn-minor:hover
   color: #888
-  border: 1px solid #ddd
+  border-color: #ddd
   background-color: #ddd
 
-.btn-action
-.btn-action:hover
-  border: 1px solid #6e839a
+.btn-read
+.btn-read:hover
+  border-color: #6e839a
   background-color: #6e839a
 
 .btn-large
 .btn-large:hover
   font-size: 14px
   padding: 5px 12px
+
+.btn
+.btn:hover
+  *padding-bottom: 3px
+
+input.btn
+button.btn
+  *line-height: 11px
+
+input.btn
+  *padding: 6px 12px 1px
+input.btn.btn-large
+  *padding: 7px 12px 3px

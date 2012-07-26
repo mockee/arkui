@@ -1,38 +1,37 @@
-table#buttons.table
+table#buttons.table.table-bordered.table-striped
   thead
     tr
-      th 按钮
-      th 链接
+      th Button
+      th Input
+      th Link
       th class=""
-      th 描述
+      th Description
   tbody
     tr
       td
         button.btn 购买
       td
-        a.btn(href='#') 加入列表
+        input.btn(type='button', value='购买')
+      td
+        a.btn(href='#') 购买
       td
         code btn
       td 书店标准按钮
     tr
       td
-        button.btn.btn-large 为账户充值
+        button.btn.btn-large 账户充值
       td
-        a.btn.btn-large(href='#') 为账户充值
+        input.btn.btn-large(type='button', value='账户充值')
+      td
+        a.btn.btn-large(href='#') 账户充值
       td
         code btn btn-large
       td 比标准尺寸大些的按钮
     tr
       td
-        button.btn.btn-action 阅读
-      td
-        a.btn.btn-action(href='#') 阅读
-      td
-        code btn btn-read
-      td 豆瓣阅读专属按钮
-    tr
-      td
         button.btn.btn-minor 试读
+      td
+        input.btn.btn-minor(type='button', value='试读')
       td
         a.btn.btn-minor(href='#') 试读
       td
@@ -42,7 +41,19 @@ table#buttons.table
       td
         button.btn.btn-info 分享
       td
-        a.btn.btn-info(href='#') 赠送
+        input.btn.btn-info(type='button', value='分享')
+      td
+        a.btn.btn-info(href='#') 分享
       td
         code btn btn-info
       td 对特定条目进行操作的按钮
+    tr
+      td
+        button.btn.btn-read 阅读
+      td
+        input.btn.btn-read(type='button', value='阅读')
+      td
+        a.btn.btn-read(href='#') 阅读
+      td
+        code btn btn-read
+      td 豆瓣阅读专属按钮

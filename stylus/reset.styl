@@ -1,38 +1,122 @@
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote,th,td
+article
+aside
+details
+figcaption
+figure
+footer
+header
+hgroup
+nav
+section
+  display: block
+
+body
+div
+dl
+dt
+dd
+ul
+ol
+li
+h1
+h2
+h3
+h4
+h5
+h6
+pre
+form
+fieldset
+input
+button
+textarea
+p
+blockquote
+th
+td
   margin: 0
   padding: 0
 
 table
-  border-collapsecollapseborder-spacing: 0
+  border-collapse: collapse
+  border-spacing: 0
 
-fieldset,img
+img
+fieldset
   border: 0
 
-address,caption,cite,code,dfn,em,strong,th,var
+address
+caption
+cite
+code
+dfn
+em
+strong
+th
+var
   font-style: normal
   font-weight: normal
 
-ol,ul
+ol
+ul
   list-style: none
 
-caption,th
+th
+caption
   text-align: left
 
-h1,h2,h3,h4,h5,h6
+h1
+h2
+h3
+h4
+h5
+h6
   font-size: 100%
   font-weight: normal
 
-q:before,q:after
+q:before
+q:after
   content: ''
 
-abbr,acronym
+abbr
+acronym
   border: 0
 
 input
   vertical-align: middle
 
-input,button,textarea
+input
+button
+textarea
   font-size: 12px
   outline: none
   resize: none
 
+input
+button
+  *overflow: visible
+  line-height: normal
+
+input::-moz-focus-inner
+button::-moz-focus-inner
+  padding: 0
+  border: 0
+
+button
+input[type="button"]
+input[type="reset"]
+input[type="submit"]
+  cursor: pointer
+  -webkit-appearance: button
+
+input[type="search"]
+  box-sizing: content-box
+  -webkit-appearance: textfield
+
+input[type="search"]::-webkit-search-decoration
+input[type="search"]::-webkit-search-cancel-button
+  -webkit-appearance: none
+
+textarea
+  overflow: auto
+  vertical-align: top
