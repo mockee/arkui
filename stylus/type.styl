@@ -1,3 +1,16 @@
+@import "variable"
+
+body
+  font: $baseFontSize/$baseLineHeight $baseFontFamily
+
+a, a:hover
+  color: $linkColor
+  text-decoration: none
+
+a:hover
+  color: white
+  background-color: $linkColor
+
 h1, h2, h3
   color: black
   font-weight: bold
@@ -14,12 +27,35 @@ h3
 p
   margin-bottom: 10px
 
-em
+b, em
   font-weight: bold
 
 i
   font-style: italic
 
-blockquote
-  padding: 10px 15px
-  background-color: #f7f7f7
+q:before
+q:after
+blockquote:before
+blockquote:after
+  content: ''
+
+.list li
+  display: block
+
+.list-lined li
+  margin-bottom: 8px
+  padding-bottom: 8px
+  border-bottom: 1px solid #eee
+
+.list-col2 
+  font-size: 0
+  margin-right: -30px
+
+.list-col2 li
+  display: inline-block
+  *display: inline
+  *zoom: 1
+  vertical-align: top
+  font-size: 12px
+  width: 297px
+  margin: 0 30px 20px 0

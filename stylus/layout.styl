@@ -9,11 +9,13 @@ for col in 1..16
   .col{col}
     width: grid-width(col)
 
+.hd:after
 .main:after
   display: table
   content: ''
   clear: both
 
+.hd
 .main
   *zoom: 1
 
@@ -22,6 +24,12 @@ for col in 1..16
 
 .main .col:last-child
   float: right
+
+.main
+  .col4
+  .col10
+    float: unquote('right\0')
+    *float: right
 
 // for specific products
 #store
@@ -36,5 +44,3 @@ for col in 1..16
 
   footer
     padding: 0 10px
-
-

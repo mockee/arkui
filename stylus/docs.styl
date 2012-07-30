@@ -1,4 +1,4 @@
-$code-font = Menlo, Monaco, Consolas, "Courier New", monospace
+@import "variable"
 
 body
   padding: 15px
@@ -15,7 +15,7 @@ header h1
 
 header h2
   font-weight: normal
-  color: #999
+  color: $grayLight
   font-size: 16px
 
 .container
@@ -29,16 +29,20 @@ header h2
 
 .mod .hd h3
   font-size: 18px
-  color: #666
+  color: $gray
 
 code
-  font: normal 12px $code-font
+  font: normal $baseFontSize $monoFontFamily
   border: 1px solid #eaeaea
   background #f8f8f8
   padding: 1px 5px
   margin: 0 2px
   border-radius: 3px
   white-space: nowrap
+
+blockquote
+  padding: 10px 15px
+  background-color: #f7f7f7
 
 // docs table
 .table-zebra tbody tr:nth-child(odd) td
@@ -49,13 +53,16 @@ code
 .table tbody tr:hover th
   //background-color: #f5f5f5
 
+#typography p
+  font-size: 13px
+
 #layout .col
   height: 34px
   position: relative
   background-color: #f3f3f3
 
 #layout .col:hover
-  background-color: #eee
+  background-color: $grayLighter
 
 #layout .col code
   position: absolute
@@ -71,8 +78,10 @@ code
     background-color: #f3f3f3
 
   .list-col2 li:hover
-    background-color: #eee
+    background-color: $grayLighter
 
 #lists code
   float: right
   margin-top: 4px
+  font-size: $baseFontSize
+  *margin-top: -22px
