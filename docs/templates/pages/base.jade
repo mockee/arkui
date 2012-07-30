@@ -1,5 +1,5 @@
 - btn_th = ['Button', 'Input', 'Link', 'class=""', 'Description']
-- nav_items = ['Typography', 'Layouts', 'Buttons', 'Tables', 'Lists']
+- nav_items = ['Typography', 'Layouts', 'Buttons', 'Tables']
 - nav_mitems = ['用户信息', '账户充值']
 
 - btns = [{ text: '购买', sel: 'btn', desc: 'Standard button in Store' }]
@@ -12,6 +12,8 @@
 - table_td.push({ name: 'Basic', sel: '.table', desc: 'Only horizontal lines between rows' })
 - table_td.push({ name: 'Bordered', sel: '.table-bordered', desc: 'Rounds corners and adds outer border' })
 - table_td.push({ name: 'Striped', sel: '.table-striped', desc: 'Adds background color to odd rows' })
+
+- list_items = ['UNITAS', 'World Literature', 'Guokr Reading', 'Scientific American']
 
 .mod#nav
   nav.nav-store
@@ -31,12 +33,46 @@
   .bd
     .main
       .col.col5
+        p
+          code= '<p>'
+          em emphasis
+          code= '<em>emphasis</em>'
+          code= '</p>'
+        p
+          code= '<p>'
+          i italic
+          code= '<i>italic</i>'
+          code= '</p>'
       .col.col5
       .col.col4
         blockquote
           h1 h1 / 一级标题
           h2 h2 / 二级标题
           h3 h3 / 三级标题
+
+.mod#lists
+  .main
+    article.col.col9
+      section
+        .hd
+          h3 Two Column List
+            code .list-col2
+        .bd
+          ul.list-col2
+            each i in [1,2,3,4]
+              li
+    aside.col.col4
+      section
+        .hd
+          h3 Lined List
+            code .list-lined
+        .bd
+          ul.list-lined
+            each item in list_items
+              li= item
+            each item in list_items
+              li
+                a= item
 
 .mod#layout
   .hd
@@ -95,17 +131,3 @@
                   code= td.sel
                 td= td.desc
       aside.col.col4
-
-.mod#lists
-  .hd
-    h3 Lists
-  .bd
-    .main
-      article.col.col9
-        ul.list-col2
-          each i in [1,2,3,4,5,6]
-            li
-      aside.col.col4
-        ul.list-lined
-          each i in [1,2,3,4,5,6,7,8,9,10]
-            li World Literature
