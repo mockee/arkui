@@ -1,0 +1,40 @@
+// Grid System
+$column = 48px
+$gutter = 24px
+
+grid-width(col)
+  col * ($column + $gutter) - $gutter
+
+for col in 1..16
+  .col{col}
+    width: grid-width(col)
+
+.main:after
+  display: table
+  content: ''
+  clear: both
+
+.main
+  *zoom: 1
+
+.col
+  float: left
+
+.main .col:last-child
+  float: right
+
+// for specific products
+#store
+  .main,
+  .inner
+    width: 13 * ($column + $gutter)
+    margin: 0 auto
+
+  header
+    margin-bottom: 30px
+    background-color: #ebebe4
+
+  footer
+    padding: 0 10px
+
+

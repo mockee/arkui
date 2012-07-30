@@ -1,116 +1,38 @@
+$code-font = Menlo, Monaco, Consolas, "Courier New", monospace
+
 body
-  padding: 30px 50px
+  padding: 15px
+  width: 936px 
+  margin: 0 auto
 
 header
   margin-bottom: 30px
 
 header h1
   font-weight: bold
-  font-size: 50px
+  font-size: 60px
   line-height: 1
 
 header h2
+  font-weight: normal
   color: #999
   font-size: 16px
 
 .container
   min-width: 700px
 
-section
+.mod
   margin-bottom: 30px
 
-section .hd
+.mod .hd
   margin-bottom: 15px
 
-section h3
+.mod .hd h3
   font-size: 18px
   color: #666
 
-table
-  max-width: 100%
-  background-color: transparent
-  border-collapse: collapse
-  border-spacing: 0
-
-.table
-  width: 100%
-  margin-bottom: 18px
-
-.table th
-.table td
-  padding: 8px
-  line-height: 18px
-  text-align: left
-  vertical-align: middle
-  border-top: 1px solid #ddd
-
-.table th
-  font-size: 13px
-  font-weight: bold
-
-.table thead th
-  vertical-align: bottom
-
-.table caption + thead tr:first-child th
-.table caption + thead tr:first-child td
-.table colgroup + thead tr:first-child th
-.table colgroup + thead tr:first-child td
-.table thead:first-child tr:first-child th
-.table thead:first-child tr:first-child td
-  border-top: 0
-
-.table tbody + tbody
-  border-top: 2px solid #ddd
-
-.table-bordered
-  border: 1px solid #ddd
-  border-collapse: separate
-  *border-collapse: collapsed
-  border-left: 0
-  border-radius: 4px
-
-.table-bordered th
-.table-bordered td
-  border-left: 1px solid #ddd
-
-.table-bordered caption + thead tr:first-child th
-.table-bordered caption + tbody tr:first-child th
-.table-bordered caption + tbody tr:first-child td
-.table-bordered colgroup + thead tr:first-child th
-.table-bordered colgroup + tbody tr:first-child th
-.table-bordered colgroup + tbody tr:first-child td
-.table-bordered thead:first-child tr:first-child th
-.table-bordered tbody:first-child tr:first-child th
-.table-bordered tbody:first-child tr:first-child td
-  border-top: 0
-
-.table-bordered thead:first-child tr:first-child th:first-child
-.table-bordered tbody:first-child tr:first-child td:first-child
-  border-top-left-radius: 4px
-
-.table-bordered thead:first-child tr:first-child th:last-child
-.table-bordered tbody:first-child tr:first-child td:last-child
-  border-top-right-radius: 4px;
-
-.table-bordered thead:last-child tr:last-child th:first-child
-.table-bordered tbody:last-child tr:last-child td:first-child
-  border-radius: 0 0 0 4px
-  border-bottom-left-radius: 4px
-
-.table-bordered thead:last-child tr:last-child th:last-child
-.table-bordered tbody:last-child tr:last-child td:last-child
-  border-bottom-right-radius: 4px;
-
-.table-striped tbody tr:nth-child(odd) td
-.table-striped tbody tr:nth-child(odd) th
-  background-color: #f9f9f9
-
-.table tbody tr:hover td
-.table tbody tr:hover th
-  background-color: #f5f5f5
-
 code
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace
+  font-family: $code-font 
   border: 1px solid #eaeaea
   background #f8f8f8
   padding: 1px 5px
@@ -118,3 +40,35 @@ code
   border-radius: 3px
   white-space: nowrap
 
+// docs table
+.table-zebra tbody tr:nth-child(odd) td
+.table-zebra tbody tr:nth-child(odd) th
+  background-color: #f9f9f9
+
+.table tbody tr:hover td
+.table tbody tr:hover th
+  //background-color: #f5f5f5
+
+#layout .col
+  height: 34px
+  position: relative
+  background-color: #f3f3f3
+
+#layout .col:hover
+  background-color: #eee
+
+#layout .col code
+  position: absolute
+  top: 6px
+  left: 4px
+
+#store .main
+  margin-bottom: 20px
+
+#lists
+  .list-col2 li
+    height: 134px
+    background-color: #f3f3f3
+
+  .list-col2 li:hover
+    background-color: #eee
