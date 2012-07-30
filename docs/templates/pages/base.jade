@@ -1,6 +1,6 @@
 - btn_th = ['Button', 'Input', 'Link', 'class=""', 'Description']
 - nav_items = ['Typography', 'Layouts', 'Buttons', 'Tables']
-- nav_mitems = ['用户信息', '账户充值']
+- nav_mitems = ['Trello', 'Github']
 
 - btns = [{ text: '购买', sel: 'btn', desc: 'Standard button in Store' }]
 - btns.push({ text: '试读', sel: 'btn btn-minor', desc: 'Usually appears together with standard buttons' })
@@ -32,18 +32,26 @@
     h3 Typography
   .bd
     .main
-      .col.col5
+      .col.col9
         p
           code= '<p>'
+          b Bold
+          = ' text works for '
           em emphasis
           code= '<em>emphasis</em>'
+          = ', but it is harder to read.'
           code= '</p>'
         p
           code= '<p>'
-          i italic
-          code= '<i>italic</i>'
+          = 'Type set in '
+          i italics
+          code= '<i>italics</i>'
+          = ' can lose legibility.'
+          = ' Word shapes shift as sans serif fonts slant over to one side.'
+          = ' Spacing within and between letters gets lost as serif fonts'
+          = ' tend to get narrower and closer together in their italic form.'
+          = ' Readers have to slow down to process the word shapes.'
           code= '</p>'
-      .col.col5
       .col.col4
         blockquote
           h1 h1 / 一级标题
