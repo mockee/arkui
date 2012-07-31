@@ -39,6 +39,11 @@ blockquote:before
 blockquote:after
   content: ''
 
+ul, ol
+  font-size: 0
+  li
+    font-size: $baseFontSize
+
 .list li
   display: block
 
@@ -48,14 +53,31 @@ blockquote:after
   border-bottom: 1px solid #eee
 
 .list-col2 
-  font-size: 0
   margin-right: -30px
+  li
+    display: inline-block
+    *display: inline
+    *zoom: 1
+    vertical-align: top
+    width: 297px
+    margin: 0 30px 20px 0
 
-.list-col2 li
-  display: inline-block
-  *display: inline
-  *zoom: 1
-  vertical-align: top
-  font-size: 12px
-  width: 297px
-  margin: 0 30px 20px 0
+.tags 
+  li
+    display: inline
+    font-size: 14px
+  a
+    display: inline-block
+    *display: inline
+    *zoom: 1
+    line-height: 1
+    margin: 0 6px 4px 0
+    padding: 6px 10px
+    background-color: #ebebe4
+    border-radius: 3px
+    word-wrap: break-word
+    overflow: hidden
+  a:hover
+   color: $linkColor
+   background-color: #dbdbd4
+

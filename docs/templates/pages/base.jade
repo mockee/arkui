@@ -13,10 +13,11 @@
 - table_td.push({ name: 'Bordered', sel: '.table-bordered', desc: 'Rounds corners and adds outer border' })
 - table_td.push({ name: 'Striped', sel: '.table-striped', desc: 'Adds background color to odd rows' })
 
-- list_items = ['UNITAS', 'World Literature', 'Guokr Reading', 'Scientific American']
+- tags = ['小说', '悬疑', '推理', '神秘主义', '密室', '本格', '重口味', '成长']
+- list_items = ['UNITAS', 'World Literature', 'Guokr Reading', 'Scientific American', 'World Architecture']
 
 .mod#nav
-  nav.nav-store
+  nav.nav.nav-store
     .inner
       ul.items
         each item in nav_items
@@ -46,11 +47,11 @@
           = 'Type set in '
           i italics
           code= '<i>italics</i>'
-          = ' can lose legibility.'
-          = ' Word shapes shift as sans serif fonts slant over to one side.'
-          = ' Spacing within and between letters gets lost as serif fonts'
-          = ' tend to get narrower and closer together in their italic form.'
-          = ' Readers have to slow down to process the word shapes.'
+          | can lose legibility.
+          | Word shapes shift as sans serif fonts slant over to one side.
+          | Spacing within and between letters gets lost as serif fonts
+          | tend to get narrower and closer together in their italic form.
+          | Readers have to slow down to process the word shapes.
           code= '</p>'
       .col.col4
         blockquote
@@ -58,29 +59,34 @@
           h2 h2 / 二级标题
           h3 h3 / 三级标题
 
-.mod#lists
-  .main
-    article.col.col9
-      section
-        .hd
-          h3 Two Column List
-            code .list-col2
-        .bd
-          ul.list-col2
-            each i in [1,2,3,4]
-              li
-    aside.col.col4
-      section
-        .hd
-          h3 Lined List
-            code .list-lined
-        .bd
-          ul.list-lined
-            each item in list_items
-              li= item
-            each item in list_items
-              li
-                a= item
+    #lists.main
+      article.col.col9
+        section
+          .hd
+            h3 Two Column List
+              code .list-col2
+          .bd
+            ul.list-col2
+              each i in [1,2,3,4]
+                li
+      aside.col.col4
+        section
+          .hd
+            h3 Tags
+              code .tags
+          .bd
+            ul.tags
+              each tag in tags
+                li
+                  a(href='#')= tag
+        section
+          .hd
+            h3 Lined List
+              code .list-lined
+          .bd
+            ul.list-lined
+              each item in list_items
+                li= item
 
 .mod#layout
   .hd

@@ -23,13 +23,15 @@ header h2
 
 .mod
   margin-bottom: 30px
+  .hd
+    margin-bottom: 15px
+    h3
+      color: black
+      font-size: 20px
 
-.mod .hd
-  margin-bottom: 15px
-
-.mod .hd h3
-  font-size: 18px
-  color: $gray
+  section .hd h3
+    color: $gray
+    font-size: 18px
 
 code
   font: normal $baseFontSize $monoFontFamily
@@ -49,9 +51,8 @@ blockquote
 .table-zebra tbody tr:nth-child(odd) th
   background-color: #f9f9f9
 
-.table tbody tr:hover td
-.table tbody tr:hover th
-  //background-color: #f5f5f5
+.nav-store .inner
+  width: 93%
 
 #typography p
   font-size: 13px
@@ -73,6 +74,7 @@ blockquote
   margin-bottom: 20px
 
 #lists
+  margin: 20px 0 -40px
   .list-col2 li
     height: 134px
     background-color: #f3f3f3
@@ -81,7 +83,7 @@ blockquote
     background-color: $grayLighter
 
 #lists code
-  float: right
-  margin-top: 4px
+  position: relative
+  top: -2px
+  margin-left: 10px
   font-size: $baseFontSize
-  *margin-top: -22px

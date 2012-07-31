@@ -1,22 +1,23 @@
-.nav-store:after
+.nav:after
 .items-minor:after
   display: table
   content: ''
   clear: both
 
-.nav-store
-  font-size: 14px
+.nav
   padding: 8px 0
   background-color: #ebebe4
   border-top: 1px solid #ddd
 
-.nav-store .inner
-  width: 93%
+.nav .inner
   margin: 0 auto
 
-.nav-store .items
+.nav .items
   float: left
   line-height: 1
+
+.nav .items li
+  font-size: 14px
 
 .items li
   display: inline
@@ -28,13 +29,13 @@
   padding: 5px
   border-radius: 3px
 
-.nav-store .items-minor
+.nav .items-minor
   float: right
-  font-size: 12px
   margin-top: 6px
 
-.items-minor li
+.nav .items-minor li
   display: inline
+  font-size: $baseFontSize
   margin-right: 10px
   white-space: nowrap
 
@@ -56,11 +57,11 @@
   *display: inline
   *zoom: 1
 
-.nav-store
+.nav
 .items-minor
   *zoom: 1
 
-.nav-store .items-minor
+.nav .items-minor
   *margin-top: 4px
 
 .items-minor a
