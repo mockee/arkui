@@ -66,8 +66,16 @@
             h3 Two Column List
               code .list-col2
           .bd
-            ul.list-col2
+            ul.list-col.list-col2
               each i in [1,2,3,4]
+                li
+        section
+          .hd
+            h3 Five Column List
+              code .list-col5
+          .bd
+            ul.list-col.list-col5
+              each i in [1,2,3,4,5]
                 li
       aside.col.col4
         section
@@ -79,6 +87,14 @@
               each tag in tags
                 li
                   a(href='#')= tag
+        section
+          .hd
+            h3 List
+              code .list
+          .bd
+            ul.list
+              each item in list_items
+                li= item
         section
           .hd
             h3 Lined List
