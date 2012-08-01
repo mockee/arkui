@@ -76,11 +76,19 @@ blockquote
 #lists
   margin: 20px 0 -40px
   .list-col li
+    color: #ddd
     height: 134px
+    line-height: @height
+    text-align: center
     background-color: #f3f3f3
+    &:hover
+      background-color: $grayLighter
 
-  .list-col li:hover
-    background-color: $grayLighter
+  .list-col2 li
+    font-size: 28px
+
+  .list-col5 li
+    font-size: 16px
 
 #lists code
   position: relative

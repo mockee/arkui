@@ -1,0 +1,137 @@
+@import "variable"
+
+label
+input
+button
+select
+textarea
+  font-size: 13px
+  line-height: $baseLineHeight
+
+input
+button
+select
+textarea
+  font-family: $baseFontFamily
+
+textarea
+input[type="text"]
+input[type="password"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="date"]
+input[type="month"]
+input[type="time"]
+input[type="week"]
+input[type="number"]
+input[type="email"]
+input[type="url"]
+input[type="search"]
+input[type="tel"]
+input[type="color"]
+  display: inline-block
+  *display: inline
+  *zoom: 1
+  padding: 4px
+  height: 20px
+  line-height: 19px
+  border: 1px solid #ccc
+  &.focused
+  &:focus
+    outline: 0
+    border-color: #aaa
+  &.error
+    border-color: $errorColor
+    border-right-width: 2px
+
+.field-group
+  margin-bottom: 15px
+
+.field-label
+  color: $gray
+  font-size: 14px
+
+input[disabled]
+select[disabled]
+textarea[disabled]
+input[readonly]
+select[readonly]
+textarea[readonly]
+.disabled
+  color: #aaa
+  padding: 4px
+  background-color: #eee
+  border: 1px solid #ddd
+  cursor: not-allowed
+
+// Radios & Checkboxs
+input[type="radio"]
+input[type="checkbox"]
+  margin: 3px 0
+  *margin-top: 0
+  line-height: normal
+
+.radio
+.checkbox
+  display: inline-block
+  *display: inline
+  *zoom: 1
+  color: $gray
+  margin: 5px 15px 0 0
+
+.radio input[type="radio"]
+.checkbox input[type="checkbox"]
+  float: left
+  margin-right: 5px
+
+.help-block
+  color: #999
+  margin: 5px 0 0
+
+.help-inline
+  display: inline-block
+  *display: inline
+  *zoom: 1
+  color: #999
+  padding-left: 8px
+  vertical-align: middle
+
+.error
+  color: $errorColor
+
+.form-actions
+  button
+    margin-right: 5px
+
+.form-horizontal
+  .field-group:after
+    display: table
+    content: ''
+    clear: both
+
+  .field-group
+    *zoom: 1
+
+  .field-label
+    float: left
+    width: 100px
+    margin-top: 3px
+    text-align: right
+
+  .fields
+  .fields-inline
+    margin-left: 120px
+    
+  .fields-inline
+    input
+      margin-right: 5px
+
+  .form-actions
+    margin: 10px 0 0 120px
+
+.form-vertical
+  .form-actions
+    padding-top: 8px
+  .field-label
+    display: block
+    margin-bottom: 3px

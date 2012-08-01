@@ -14,7 +14,7 @@
 - table_td.push({ name: 'Striped', sel: '.table-striped', desc: 'Adds background color to odd rows' })
 
 - tags = ['小说', '悬疑', '推理', '神秘主义', '密室', '本格', '重口味', '成长']
-- list_items = ['UNITAS', 'World Literature', 'Guokr Reading', 'Scientific American', 'World Architecture']
+- list_items = ['UNITAS', 'World Literature', 'Guokr Reading', 'Scientific American', 'World Architecture', 'Douban Read']
 
 .mod#nav
   nav.nav.nav-store
@@ -68,7 +68,7 @@
           .bd
             ul.list-col.list-col2
               each i in [1,2,3,4]
-                li
+                li 134 x 297
         section
           .hd
             h3 Five Column List
@@ -76,7 +76,7 @@
           .bd
             ul.list-col.list-col5
               each i in [1,2,3,4,5]
-                li
+                li cover
       aside.col.col4
         section
           .hd
@@ -161,3 +161,89 @@
                   code= td.sel
                 td= td.desc
       aside.col.col4
+
+.mod#forms
+  .hd
+    h3 Forms
+  .bd
+    .main
+      article.col.col9
+        section
+          .hd
+            h3 Horizontal Form
+          .bd
+            form.form-horizontal
+              fieldset
+                .field-group
+                  label.field-label Text input
+                  .fields-inline
+                    input.col1(type='text', value='col1')
+                    input.col3(type='text', value='col3')
+                    span.help-inline Multi inline input
+                .field-group
+                  label.field-label Radios
+                  .fields-inline
+                    each i in [1,2,3]
+                      radioState = i === 1 ? 'checked' : ''
+                      label.radio
+                        if (radioState === 'checked')
+                          input(type='radio', name='radios', checked)
+                          = 'item' + i
+                        else
+                          input(type='radio', name='radios')
+                          = 'item' + i
+                .field-group
+                  label.field-label Checkboxs
+                  .fields-inline
+                    each i in [1,2,3,4,5]
+                      checkboxState = (i === 1 || i === 2) ? 'checked' : ''
+                      label.checkbox
+                        if (checkboxState)
+                          input(type='checkbox', checked)
+                          = 'item' + i
+                        else
+                          input(type='checkbox')
+                          = 'item' + i
+                .field-group
+                  label.field-label Disabled input
+                  .fields
+                    input.col5.disabled(type='text', value='col5 disabled', disabled)
+                    p.help-block Block help text for current field
+                .field-group
+                  label.field-label Focused input
+                  .fields
+                    input.col5.focused(type='text', value='col5 focused')
+                    span.help-inline Inline help text
+                .field-group
+                  label.field-label Checkbox
+                  .fields
+                    label.checkbox
+                      input(type='checkbox')
+                      = 'I agree to the Douban Terms of Service'
+                .form-actions
+                  button.btn.btn-minor.btn-large(type='cancel') 保存退出
+                  button.btn.btn-read.btn-large(type='submit') 下一步
+
+      aside.col.col4
+        section
+          .hd
+            h3 Vertical Form
+          .bd
+            form.form-vertical
+              fieldset
+                .field-group
+                  label.field-label Text input
+                  .fields
+                    input.col3(type='text', value='col3')
+                .field-group
+                  label.field-label Input with error
+                  .fields
+                    input.col3.error(type='text', value='col3 error')
+                    span.help-inline.error Error info
+                .field-group
+                  label.field-label Disabled input
+                  .fields
+                    input.col3.disabled(type='text', value='col3 disabled', disabled)
+                .form-actions
+                  button.btn.btn-large(type='submit') 保存修改
+                  button.btn.btn-minor.btn-large(type='cancel') 取消
