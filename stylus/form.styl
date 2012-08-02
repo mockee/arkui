@@ -29,9 +29,7 @@ input[type="url"]
 input[type="search"]
 input[type="tel"]
 input[type="color"]
-  display: inline-block
-  *display: inline
-  *zoom: 1
+  inline-block()
   padding: 4px
   height: 20px
   line-height: 19px
@@ -50,6 +48,14 @@ input[type="color"]
 .field-label
   color: $gray
   font-size: 14px
+
+select
+input[type="file"]
+  height: 28px
+  line-height: @height
+
+select
+  border: 1px solid #ccc
 
 input[disabled]
 select[disabled]
@@ -73,9 +79,7 @@ input[type="checkbox"]
 
 .radio
 .checkbox
-  display: inline-block
-  *display: inline
-  *zoom: 1
+  inline-block()
   color: $gray
   margin: 5px 15px 0 0
 
@@ -89,9 +93,7 @@ input[type="checkbox"]
   margin: 5px 0 0
 
 .help-inline
-  display: inline-block
-  *display: inline
-  *zoom: 1
+  inline-block()
   color: #999
   padding-left: 8px
   vertical-align: middle
@@ -135,3 +137,9 @@ input[type="checkbox"]
   .field-label
     display: block
     margin-bottom: 3px
+
+.multi-input input
+  margin-bottom: 8px
+
+.multi-input .help-inline
+  margin-top: -8px

@@ -1,5 +1,9 @@
 - btn_th = ['Button', 'Input', 'Link', 'class=""', 'Description']
-- nav_items = ['Typography', 'Layouts', 'Buttons', 'Tables']
+- nav_items = [{ name: 'Typography', anchor: 'typography'}]
+- nav_items.push({ name: 'Layouts', anchor: 'layouts'})
+- nav_items.push({ name: 'Buttons', anchor: 'buttons'})
+- nav_items.push({ name: 'Tables', anchor: 'tables'})
+- nav_items.push({ name: 'Forms', anchor: 'forms'})
 - nav_mitems = ['Trello', 'Github']
 
 - btns = [{ text: '购买', sel: 'btn', desc: 'Standard button in Store' }]
@@ -22,7 +26,7 @@
       ul.items
         each item in nav_items
           li
-            a(href='#')= item
+            a(href='#' + item.anchor)= item.name
       ul.items.items-minor
         each mitem in nav_mitems
           li
@@ -178,7 +182,7 @@
                   label.field-label Text input
                   .fields-inline
                     input.col1(type='text', value='col1')
-                    input.col3(type='text', value='col3')
+                    input.col3.focused(type='text', value='col3 focused')
                     span.help-inline Multi inline input
                 .field-group
                   label.field-label Radios
@@ -210,10 +214,26 @@
                     input.col5.disabled(type='text', value='col5 disabled', disabled)
                     p.help-block Block help text for current field
                 .field-group
-                  label.field-label Focused input
+                  label.field-label Multi-input
+                  .fields.multi-input
+                    each i in [1,2]
+                      input.col5(type='text', value='col5')
+                      span.help-inline Inline help text
+                .field-group
+                  label.field-label File input
                   .fields
-                    input.col5.focused(type='text', value='col5 focused')
-                    span.help-inline Inline help text
+                    input(type='file')
+                .field-group
+                  label.field-label Select list
+                  .fields
+                    select.col3
+                      each i in [1,2,3,4,5]
+                        option
+                          = 'list item' + i
+                .field-group
+                  label.field-label Textarea
+                  .fields
+                    textarea.col5(placeholder='placeholder')
                 .field-group
                   label.field-label Checkbox
                   .fields
@@ -244,6 +264,18 @@
                   label.field-label Disabled input
                   .fields
                     input.col3.disabled(type='text', value='col3 disabled', disabled)
+                .field-group
+                  label.field-label Url
+                  .fields
+                    input.col3(type='url', placeholder='douban.com')
+                .field-group
+                  label.field-label Email
+                  .fields
+                    input.col3(type='email', placeholder='mockee@douban.com')
+                .field-group
+                  label.field-label Date
+                  .fields
+                    input.col3(type='date', placeholder='Month/Day/Year')
                 .form-actions
                   button.btn.btn-large(type='submit') 保存修改
                   button.btn.btn-minor.btn-large(type='cancel') 取消
