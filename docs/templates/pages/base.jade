@@ -81,6 +81,26 @@
             ul.list-col.list-col5
               each i in [1,2,3,4,5]
                 li cover
+
+        section
+          .hd
+            h3 Pagination
+          .bd
+            .pagination
+              ul
+                li.prev
+                  &lt;&nbsp;前页
+                each i in [1,2,3,4,5,'...',17,18]
+                  li
+                    if (i === 1)
+                      a(href='#').active= i
+                    else if (i === '...')
+                      =i
+                    else
+                      a(href='#')= i
+                li.next
+                  a(href='#') 后页&nbsp;&gt;
+
       aside.col.col4
         section
           .hd
