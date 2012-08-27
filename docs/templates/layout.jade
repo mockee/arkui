@@ -9,9 +9,21 @@ html
       (function(){if(!/*@cc_on!@*/0)return;var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i--){document.createElement(e[i])}})()
 
   body
+    - nav_items = [{ title: 'Base CSS', name: 'base' }]
+    - nav_items.push({ title: 'Components', name: 'components' })
+    - nav_items.push({ title: 'Mobile', name: 'mobile' })
+
+    nav.navbar
+      ul.inner
+        each item in nav_items
+          li
+            - klass = page_name === item.name ? 'active' : ''
+            a(href= item.name + '.html', class= klass)
+              = item.title
     header
-      h1 Arkui
-      h2 Basic UI components for Douban Read.
+      .inner
+        h1 Arkui
+        h2 Basic UI components for Douban Read.
     .container
       != body
     footer

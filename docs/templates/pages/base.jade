@@ -1,9 +1,11 @@
+- page_name = 'base'
+
 - btn_th = ['Button', 'Input', 'Link', 'class=""', 'Description']
-- nav_items = [{ name: 'Typography', anchor: 'typography'}]
-- nav_items.push({ name: 'Layouts', anchor: 'layouts'})
-- nav_items.push({ name: 'Buttons', anchor: 'buttons'})
-- nav_items.push({ name: 'Tables', anchor: 'tables'})
-- nav_items.push({ name: 'Forms', anchor: 'forms'})
+- menu_items = [{ name: 'Typography', anchor: 'typography'}]
+- menu_items.push({ name: 'Layouts', anchor: 'layouts'})
+- menu_items.push({ name: 'Buttons', anchor: 'buttons'})
+- menu_items.push({ name: 'Tables', anchor: 'tables'})
+- menu_items.push({ name: 'Forms', anchor: 'forms'})
 - nav_mitems = ['Trello', 'Github']
 
 - btns = [{ text: '购买', sel: 'btn', desc: 'Standard button in Store' }]
@@ -24,7 +26,7 @@
   nav.nav.nav-store
     .inner
       ul.items
-        each item in nav_items
+        each item in menu_items
           li
             a(href='#' + item.anchor)= item.name
       ul.items.items-minor
@@ -81,25 +83,6 @@
             ul.list-col.list-col5
               each i in [1,2,3,4,5]
                 li cover
-
-        section
-          .hd
-            h3 Pagination
-          .bd
-            .pagination
-              ul
-                li.prev
-                  &lt;&nbsp;前页
-                each i in [1,2,3,4,5,'...',17,18]
-                  li
-                    if (i === 1)
-                      a(href='#').active= i
-                    else if (i === '...')
-                      =i
-                    else
-                      a(href='#')= i
-                li.next
-                  a(href='#') 后页&nbsp;&gt;
 
       aside.col.col4
         section
