@@ -1,12 +1,48 @@
+@import "mixins"
 @import "variable"
 
 body
-  padding: 15px
+  padding: 15px 0
+
+.inner
+.container
   width: 936px 
   margin: 0 auto
 
+nav.navbar
+  top: 0
+  left: 0
+  z-index: 10
+  position: fixed
+  _position: absolute
+  height: 28px
+  width: 100%
+  background-color: #000
+  li
+    inline-block()
+    vertical-align: top
+  a
+    color: $grayLight
+    inline-block()
+    vertical-align: top
+    padding: 5px 20px
+    &.active
+    &.active:hover
+      cursor: default
+      font-size: 14px
+      color: #fff
+      padding: 10px 20px
+      _padding: 5px 20px
+      background-color: $linkColor
+    &:hover
+      color: #fff
+      background: none
+
 header
-  margin-bottom: 30px
+  padding: 40px 0 30px 20px
+  margin-bottom: 40px
+  background-color: #f7f7f7
+  border-bottom: 1px solid #eee
 
 header h1
   font-weight: bold
@@ -118,3 +154,7 @@ blockquote
 #forms
   textarea
     height: 80px
+
+// Components
+.pagination
+  padding-top: 0

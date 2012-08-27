@@ -1,0 +1,91 @@
+@import "mixins"
+@import "variable"
+
+.stars-context
+.stars-small-context
+  inline-block()
+  vertical-align: -5px
+  overflow: hidden
+  width: 96px
+  height: 18px
+  margin-left: 4px
+  background: url(../img/rating_stars.png) no-repeat
+
+.stars-
+.stars-null
+.stars-0
+  background-position: 0px -110px
+
+.stars-1
+  background-position: 0px -88px
+
+.stars-2
+  background-position: 0px -66px
+
+.stars-3
+  background-position: 0px -44px
+
+.stars-4
+  background-position: 0px -22px
+
+.stars-5
+  background-position: 0px 0px
+
+.stars-small-context
+  width: 75px
+  margin-left: 5px
+  background-image: url(../img/rating_stars_small.png)
+  *vertical-align: -2px
+
+.stars-small-1
+  background-position: 0px -79px
+
+.stars-small-2
+  background-position: 0px -59px
+
+.stars-small-3
+  background-position: 0px -38px
+
+.stars-small-4
+  background-position: 0px -18px
+
+.stars-small-5
+  background-position: 0px 1px
+
+.rating-status
+  margin-top: 30px
+  .rating-stars
+    vertical-align: middle
+  .rating-num
+    inline-block()
+    color: #6e3939
+    font-size: 14px
+    vertical-align: top
+    padding-left: 5px
+
+.rating-stat
+  margin-top: 20px
+  .item
+    margin-bottom: 5px
+    color: #111
+    font-size: 0
+    .rank-name
+    .bar
+    .rank-rate
+    .rating-stars
+      vertical-align: middle
+    .rating-stars
+      margin-top: 1px;
+    .rank-name
+      color: #666
+      font-size: 12px
+    .bar
+      margin: 0 8px 0 2px
+    .rank-rate
+      color: #111
+      font-size: 12px
+
+.bar-chart .bar
+  inline-block()
+  background-color: #6e3939
+  height: 15px
