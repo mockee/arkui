@@ -1,6 +1,6 @@
 - page_name = 'base'
 
-- btn_th = ['Button', 'Input', 'Link', 'class=""', 'Description']
+- btn_th = ['Button', 'Input', 'class=""', 'Description']
 - menu_items = [{ name: 'Typography', anchor: 'typography'}]
 - menu_items.push({ name: 'Layouts', anchor: 'layouts'})
 - menu_items.push({ name: 'Buttons', anchor: 'buttons'})
@@ -9,9 +9,15 @@
 - nav_mitems = ['Trello', 'Github']
 
 - btns = [{ text: '购买', sel: 'btn', desc: 'Standard button in Store' }]
-- btns.push({ text: '试读', sel: 'btn btn-minor', desc: 'Usually appears together with standard buttons' })
+- btns.push({ text: '试读', sel: 'btn btn-minor', desc: 'Usually appears with standard button' })
 - btns.push({ text: '分享', sel: 'btn btn-info', desc: 'Info button for the particular entry' })
 - btns.push({ text: '阅读', sel: 'btn btn-read', desc: 'Douban Read exclusive button' })
+- btns.push({ text: '发布', sel: 'btn btn-green', desc: 'Sage green button, used for submission' })
+- btns.push({ text: '取消', sel: 'btn-link', desc: 'Link-like button' })
+
+- btn_sizes = [{ text: '一般尺寸', sel: 'btn' }]
+- btn_sizes.push({ text: '大尺寸', sel: 'btn-large' })
+- btn_sizes.push({ text: '超大尺寸', sel: 'btn-huge' })
 
 - table_th = ['Name', 'Class', 'Description']
 - table_td = [{ name: 'Default', sel: 'None', desc: 'No styles, just columns and rows' }]
@@ -131,23 +137,40 @@
   .hd
     h3 Buttons
   .bd
-    table.table.table-bordered.table-zebra
-      thead
-        tr
-          each th in btn_th
-            th= th 
-      tbody
-        each btn in btns
-          tr
-            td
-              button(class=btn.sel)= btn.text
-            td
-              input(class=btn.sel, type='button', value= btn.text)
-            td
-              a(class=btn.sel, href='#')= btn.text
-            td
-              code= btn.sel
-            td= btn.desc
+    .main
+      article.col.col9
+        table.table.table-bordered.table-zebra
+          thead
+            tr
+              each th in btn_th
+                th= th 
+          tbody
+            each btn in btns
+              tr
+                td
+                  button(class=btn.sel)= btn.text
+                td
+                  input(class=btn.sel
+                    type='button'
+                    value= btn.text)
+                td
+                  code= btn.sel
+                td= btn.desc
+      aside.col.col4
+        .button-sizes
+          table.table.table-bordered.table-zebra
+            thead
+              tr
+                th Button
+                th class=""
+              tbody
+                each btn_size in btn_sizes
+                  tr
+                    td
+                      button.btn.btn-green(class=btn_size.sel)
+                        = btn_size.text
+                    td
+                      code= btn_size.sel
 
 .mod#tables
   .hd
