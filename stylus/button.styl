@@ -49,6 +49,14 @@
   background-color: $sageGreen
   border-color: $sageGreen
 
+.btn-disabled
+.btn-disabled:hover
+  color: #aaa
+  border-color: #ddd
+  background-color: $grayLighter
+  padding: 4px 12px
+  cursor: not-allowed
+
 input
 button
   &.btn-link
@@ -64,6 +72,7 @@ button
       color: #fff;
       background: $linkColor
 
+// for Firefox
 unquote("
   @-moz-document url-prefix() {
     input.btn,
@@ -73,7 +82,7 @@ unquote("
   }
 ")
 
-// for IE 6 and 7
+// for IE 6/7
 input.btn
 input.btn:hover
 button.btn
@@ -81,6 +90,20 @@ button.btn:hover
   *padding-bottom: 0
   _padding: 4px 12px
   _line-height: 11px
+
+// for IE 9
+:root
+  .btn
+  .btn:hover
+    padding: unquote("5px 12px 3px\9")
+
+  .btn-large
+  .btn-large:hover
+    padding: 6px 14px
+
+  .btn-huge
+  .btn-huge:hover
+    padding: 10px 40px
 
 input.btn
   _padding-top: 6px
