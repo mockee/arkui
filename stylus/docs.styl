@@ -93,40 +93,11 @@ blockquote
 #typography p
   font-size: 13px
 
-#layout .col
-  height: 34px
-  position: relative
-  background-color: #f3f3f3
-
-#layout .col:hover
-  background-color: $grayLighter
-
-#layout .col code
-  position: absolute
-  top: 6px
-  left: 4px
-
 .main
   .col4
   .col10
     float: unquote('right\0')
     *float: right
-
-#store
-  .main
-  .inner
-    width: 13 * ($column + $gutter)
-    margin: 0 auto
-
-  header
-    margin-bottom: 30px
-    background-color: #ebebe4
-
-  footer
-    padding: 0 10px
-
-#store .main
-  margin-bottom: 20px
 
 #lists
   margin: 20px 0 -40px
@@ -154,6 +125,31 @@ blockquote
 #forms
   textarea
     height: 80px
+
+// Layouts
+.layout
+  .main
+  .inner
+    width: 13 * ($column + $gutter)
+    margin: 0 auto
+  .main
+    margin-bottom: 20px
+  header
+    margin-bottom: 30px
+    background-color: #ebebe4
+  footer
+    padding: 0 10px
+
+.layout .col
+  height: 34px
+  position: relative
+  background-color: #f3f3f3
+  &:hover
+    background-color: $grayLighter
+  code
+    position: absolute
+    top: 6px
+    left: 4px
 
 // Components
 .pagination
