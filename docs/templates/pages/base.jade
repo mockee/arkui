@@ -221,7 +221,10 @@
                 .field-group
                   label.field-label Disabled input
                   .fields
-                    input.col5.disabled(type='text', value='col5 disabled', disabled)
+                    input.col5.disabled(
+                      type='text'
+                      value='col5 disabled'
+                      disabled)
                     p.help-block Block help text for current field
                 .field-group
                   label.field-label Multi-input
@@ -243,7 +246,7 @@
                 .field-group
                   label.field-label Textarea
                   .fields
-                    textarea.col5(placeholder='placeholder')
+                    textarea.col5(rows='5', placeholder='placeholder')
                 .field-group
                   label.field-label Checkbox
                   .fields
