@@ -68,9 +68,20 @@ select[readonly]
 textarea[readonly]
   color: #aaa
   padding: 4px
-  background-color: #eee
+  background-color: $grayLighter
   border: 1px solid #ddd
+
+input[disabled]
+select[disabled]
+textarea[disabled]
   cursor: not-allowed
+
+input[readonly]
+select[readonly]
+textarea[readonly]
+  color: $grayLight
+  cursor: text
+  background-color: #f7f7f7
 
 // Radios & Checkboxs
 input[type="radio"]
@@ -107,6 +118,10 @@ input[type="checkbox"]
   button
     margin-right: 5px
 
+.fields-inline
+  input
+    margin-right: 5px
+
 .form-horizontal
   .field-group:after
     display: table
@@ -126,10 +141,6 @@ input[type="checkbox"]
   .fields-inline
     margin-left: 120px
     
-  .fields-inline
-    input
-      margin-right: 5px
-
   .form-actions
     margin: 10px 0 0 120px
 

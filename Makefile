@@ -11,6 +11,8 @@ build:
 	@stylus ${ARKUI_STYLUS} -c -o ${PATH_CSS}
 	@echo "Arkui successfully built at ${DATE}."
 
-watch:
+watch_jade:
 	@jade -w ${PATH_TMPL}/pages -O ./docs
+
+watch_stylus:
 	@stylus -w ${PATH_STYLUS} -o ${PATH_CSS}

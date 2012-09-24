@@ -275,24 +275,38 @@ block content
                   .field-group
                     label.field-label Input with error
                     .fields
-                      input.col3.error(type='text', value='col3 error')
+                      input.col3.error(type='text'
+                        value='col3 error')
                       span.help-inline.error Error info
                   .field-group
                     label.field-label Disabled input
                     .fields
-                      input.col3.disabled(type='text', value='col3 disabled', disabled)
+                      input.col3.disabled(
+                        type='text'
+                        value='col3 disabled'
+                        disabled)
+                  .field-group
+                    label.field-label Readonly input
+                    .fields
+                      input.col3.readonly(
+                        type='text'
+                        value='col3 readonly'
+                        readonly)
                   .field-group
                     label.field-label Url
                     .fields
-                      input.col3(type='url', placeholder='douban.com')
+                      input.col3(type='url'
+                      placeholder='douban.com')
                   .field-group
                     label.field-label Email
                     .fields
-                      input.col3(type='email', placeholder='mockee@douban.com')
+                      input.col3(type='email'
+                        placeholder='mockee@douban.com')
                   .field-group
                     label.field-label Date
                     .fields
-                      input.col3(type='date', placeholder='Month/Day/Year')
+                      input.col3(type='date'
+                        placeholder='Month/Day/Year')
                   .form-actions
                     button.btn.btn-large(type='submit') 保存修改
                     button.btn.btn-minor.btn-large(type='cancel') 取消
