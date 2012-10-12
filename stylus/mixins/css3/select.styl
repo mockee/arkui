@@ -1,0 +1,10 @@
+@import "vendor"
+
+user-select(value)
+  vendor('user-select', arguments, only: webkit moz ms)
+
+set-selection-color(hash)
+  ::selection
+    background: hash
+  ::-moz-selection
+    background: hash

@@ -1,15 +1,22 @@
+PATH_DOCS = ./docs
 PATH_CSS = ./docs/css
-PATH_STYLUS = ./stylus/
 PATH_TMPL = ./docs/templates
-ARKUI_STYLUS = ./stylus/arkui.styl
+PATH_STYLUS = ./stylus
 
 DATE = $(shell date +%I:%M%p) 
 
 build:
-	@echo "Building Arkui..."
+	@echo "Building Arkui Docs..."
 	@node docs/build
-	@stylus ${ARKUI_STYLUS} -c -o ${PATH_CSS}
-	@echo "Arkui successfully built at ${DATE}."
+	@stylus ${PATH_STYLUS}/arkui.styl -c -o ${PATH_CSS}
+	@stylus ${PATH_CSS}/docs.styl -c -o ${PATH_CSS}
+	@echo "Arkui Docs successfully built at ${DATE}."
+	@open ${PATH_DOCS}/base.html
+
+clear_docs:
+	@rm ${PATH_CSS}/*.css
+	@rm ${PATH_DOCS}/*.html
+	@echo "Done!"
 
 watch_jade:
 	@jade -w ${PATH_TMPL}/pages -O ./docs

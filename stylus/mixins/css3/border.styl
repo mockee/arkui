@@ -1,19 +1,4 @@
-/**
- * Copied from nib:
- * https://github.com/visionmedia/nib/blob/master/lib/nib/vendor.styl
- */
-
-vendor-prefixes ?= webkit moz o ms official
-
-vendor(prop, args, only = null, ignore = null)
-  for prefix in vendor-prefixes
-    unless (only and !(prefix in only)) or (ignore and prefix in ignore)
-      if official == prefix
-        {prop}: args
-      else
-        {'-' + prefix + '-' + prop}: args
-
-
+@import "vendor"
 
 border-radius()
   vendor('border-radius', arguments, only: webkit official)
