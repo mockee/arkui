@@ -8,10 +8,10 @@ DATE = $(shell date +%I:%M%p)
 build:
 	@echo "Building Arkui Docs..."
 	@node docs/build
-	@stylus ${PATH_STYLUS}/arkui.styl -c -o ${PATH_CSS}
+	@stylus ${PATH_STYLUS}/index.styl -c -o ${PATH_CSS}
+	@mv ${PATH_CSS}/index.css ${PATH_CSS}/arkui.css
 	@stylus ${PATH_CSS}/docs.styl -c -o ${PATH_CSS}
 	@echo "Arkui Docs successfully built at ${DATE}."
-	@open ${PATH_DOCS}/base.html
 
 clear_docs:
 	@rm ${PATH_CSS}/*.css
