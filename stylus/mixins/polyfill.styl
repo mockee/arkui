@@ -2,3 +2,7 @@ inline-block()
   display: inline-block
   *display: inline
   *zoom: 1
+
+opacity(alpha)
+  opacity: alpha
+  filter: unquote('alpha(opacity=' + alpha*100 +  ')');
