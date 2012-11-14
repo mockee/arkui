@@ -4,6 +4,21 @@
 grid-width(col)
   col * ($column + $gutter) - $gutter
 
+// usage:
+//   ul.list-col5
+//      list-colums(5, 10, 120px, 110px)
+//      li
+//       padding: 0 5px
+//
+// colWidth = rawColWidth + padding + borderWidth
+list-columns(col, parentCol, colWidth, rawColWidth = colWidth)
+  listWidth = grid-width(parentCol)
+  colPadding = (listWidth - colWidth * col) / (col - 1)
+  width: listWidth + colPadding
+  li
+    width: rawColWidth
+    margin-right: colPadding
+
 for col in 1..16
   .col{col}
     width: grid-width(col)
