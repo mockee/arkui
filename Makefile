@@ -3,7 +3,7 @@ PATH_CSS = ./docs/css
 PATH_TMPL = ./docs/templates
 PATH_STYLUS = ./stylus
 
-DATE = $(shell date +%I:%M%p) 
+DATE = $(shell date +%I:%M%p)
 
 build:
 	@echo "Building Arkui Docs..."
@@ -12,6 +12,9 @@ build:
 	@mv ${PATH_CSS}/index.css ${PATH_CSS}/arkui.css
 	@stylus ${PATH_CSS}/docs.styl -c -o ${PATH_CSS}
 	@echo "Arkui Docs successfully built at ${DATE}."
+
+test:
+	@node docs/build
 
 clear_docs:
 	@rm ${PATH_CSS}/*.css
