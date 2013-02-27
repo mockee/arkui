@@ -1,0 +1,35 @@
+body{padding:15px 0}
+.inner,.container{width:936px;margin:0 auto}
+nav.navbar{top:0;left:0;z-index:10;position:fixed;_position:absolute;height:28px;width:100%;background-color:#000;}
+nav.navbar li{display:inline-block;*display:inline;*zoom:1;vertical-align:top}
+nav.navbar a{color:#999;display:inline-block;*display:inline;*zoom:1;vertical-align:top;padding:5px 20px;}
+nav.navbar a.active,nav.navbar a.active:hover{cursor:default;font-size:14px;color:#fff;padding:10px 20px;_padding:5px 20px;background-color:#825d5b}
+nav.navbar a:hover{color:#fff;background:none}
+header{padding:40px 0 30px 20px;margin-bottom:40px;background-color:#f7f7f7;border-bottom:1px solid #eee}
+header h1{font-weight:bold;font-size:60px;line-height:1}
+header h2{font-weight:normal;color:#999;font-size:16px}
+.container{min-width:700px}
+.mod{margin-bottom:30px;}
+.mod .hd{margin-bottom:15px;}
+.mod .hd h3{color:#000;font-size:20px}
+.mod section .hd h3{color:#666;font-size:18px}
+code{font:normal 12px Menlo,Monaco,Consolas,"Courier New",monospace;border:1px solid #eaeaea;background:#f8f8f8;padding:1px 5px;margin:0 2px;-webkit-border-radius:3px;border-radius:3px;white-space:nowrap}
+blockquote{padding:10px 15px;background-color:#f7f7f7}
+.table-zebra tbody tr:nth-child(odd) td,.table-zebra tbody tr:nth-child(odd) th{background-color:#f9f9f9}
+.nav-store .inner{width:93%}
+#typography p{font-size:13px}
+#lists{margin:20px 0 -40px;}
+#lists .list-col li{color:#ddd;height:134px;line-height:134px;text-align:center;background-color:#f3f3f3;}
+#lists .list-col li:hover{background-color:#eee}
+#lists .list-col2 li{font-size:28px}
+#lists .list-col5 li{font-size:16px}
+#lists code{position:relative;top:-2px;margin-left:10px;font-size:12px}
+.col-right{float:right}
+.layout .main,.layout .inner{width:936px;margin:0 auto}
+.layout .main{margin-bottom:20px}
+.layout header{margin-bottom:30px;background-color:#ebebe4}
+.layout footer{padding:0 10px}
+.layout .col{height:34px;position:relative;background-color:#f3f3f3;}
+.layout .col:hover{background-color:#eee}
+.layout .col code{position:absolute;top:6px;left:4px}
+.pagination{padding-top:0}
