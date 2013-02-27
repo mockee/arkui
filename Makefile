@@ -3,7 +3,7 @@ build:
 	@cp ../arkui/docs/*.html .
 	@mv ./arkui.docs/base.html ./index.html
 	@echo "[Done] pages"
-	@sed -i -e "s/base.html/index.html/g" `grep base\.html -rl .`
+	@sed -i -e "s/base.html/\//g" `grep base\.html -rl .`
 	@find . -name *.html-e -exec rm -f {} \;
 	@echo "[Done] replace text"
 	@cp ../arkui/docs/css/arkui.css ./css/
