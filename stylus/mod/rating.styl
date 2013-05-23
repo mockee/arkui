@@ -37,6 +37,9 @@
   background-image: url(/pics/rating-stars-small.png)
   *vertical-align: -2px
 
+.stars-small-0
+  background-position: 0px -99px
+
 .stars-small-1
   background-position: 0px -79px
 
@@ -89,3 +92,21 @@
   inline-block()
   background-color: #825d5b
   height: 15px
+
+.star-region
+  float: left
+  opacity(0)
+  cursor: pointer
+.stars-context
+  .star-region
+    width: 19px
+    height: 18px
+.stars-small-context
+  .star-region
+    width: 13px
+    height: 13px
+    margin-right: 2px
+
+.rating
+  .label
+    margin-right: 5px

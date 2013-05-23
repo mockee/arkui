@@ -10,30 +10,45 @@
   line-height: 1.1
   background-color: #825d5b
   border: 1px solid #825d5b
-  border-radius: 3px
+  border-radius: 2px
   cursor: pointer
   vertical-align: middle
   text-decoration: none
+.btn:hover
+  border-color: #8d5f5e
+  background-color: @border-color
 
 .btn-info
 .btn-info:hover
   color: #825d5b
   border-color: #d3d3cc
-  background-color: #e5e5dd
+  background-color: #edede3
 
 .btn-info:hover
   background-color: #dbdbd4
 
-.btn-minor
-.btn-minor:hover
-  color: #888
-  border-color: #ddd
+.btn-sample
+  border-color: #999995
   background-color: @border-color
+  &:hover
+    border-color: #b2b2ae
+    background-color: @border-color
+
+.btn-minor
+  color: #888
+  border-color: #ebebe5
+  background-color: @border-color
+  &:hover
+    color: @color
+    border-color: #f5f5ef
+    background-color: @border-color
 
 .btn-read
-.btn-read:hover
   border-color: #6e839a
   background-color: @border-color
+  &:hover
+    border-color: #7a8ea3
+    background-color: @border-color
 
 .btn-green
 .btn-green:hover
@@ -66,7 +81,7 @@ button
     padding: 1px 0
     vertical-align: middle
     font-size: $baseFontSize
-    border: none 
+    border: none
     background: none
     &:hover
       color: #fff
@@ -107,7 +122,7 @@ button.btn:hover
 
 input.btn
   _padding-top: 6px
-  _padding-bottom: 2px 
+  _padding-bottom: 2px
 
 .btn-large
 .btn-large:hover
