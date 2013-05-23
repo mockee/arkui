@@ -2,4 +2,4 @@
 
 # Arkui
 
-Basic UI components for Douban Read. [Live Docs](http://mockee.github.com/arkui/).
+Basic UI components for Douban Read. [Live Docs](http://mockee.github.io/arkui/).
