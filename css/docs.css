@@ -13,7 +13,7 @@ header h2{font-weight:normal;color:#999;font-size:16px}
 .mod .hd{margin-bottom:15px;}
 .mod .hd h3{color:#000;font-size:20px}
 .mod section .hd h3{color:#666;font-size:18px}
-code{font:normal 12px Menlo,Monaco,Consolas,"Courier New",monospace;border:1px solid #eaeaea;background:#f8f8f8;padding:1px 5px;margin:0 2px;-webkit-border-radius:3px;border-radius:3px;white-space:nowrap}
+code{font:normal 12px $monoFontFamily;border:1px solid #eaeaea;background:#f8f8f8;padding:1px 5px;margin:0 2px;-webkit-border-radius:3px;border-radius:3px;white-space:nowrap}
 blockquote{padding:10px 15px;background-color:#f7f7f7}
 .table-zebra tbody tr:nth-child(odd) td,.table-zebra tbody tr:nth-child(odd) th{background-color:#f9f9f9}
 .nav-store .inner{width:93%}
