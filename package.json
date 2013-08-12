@@ -1,12 +1,12 @@
 {
-    "name": "arkui-doc-builder",
-    "version": "0.0.1",
-    "description": "Build Arkui docs.",
+    "name": "arkui-docs-builder",
+    "version": "0.0.2",
+    "description": "Arkui docs builder.",
     "dependencies": {
-        "stylus": ">= 0.28.2",
-        "jade": ">= 0.26.1"
+        "stylus": "~0.36.0",
+        "jade": "~0.34.1"
     },
     "engines": {
-        "node": ">= 0.8.3"
+        "node": "~0.10.15"
     }
 }
