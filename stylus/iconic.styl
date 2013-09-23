@@ -1,0 +1,115 @@
+$fontVer = 'v1'
+$fontName = 'arkicons'
+$fontPath = '/fonts/'
+$fontUrl = join('_', $fontPath + $fontName, $fontVer)
+
+@font-face
+  // IE9 Compat modes: eot
+  // IE6-IE8: #iefix
+  // Safari, Android, iOS: ttf
+  // Legacy iOS: svg
+  font-family: $fontName
+  src: url($fontUrl + '.eot')
+  src: url($fontUrl + '.eot?#iefix') format('embedded-opentype'),
+    url($fontUrl + '.woff') format('woff'),
+    url($fontUrl + '.ttf') format('truetype'),
+    url($fontUrl + '.svg#arkicons') format('svg')
+  font-weight: normal
+  font-style: normal
+
+// You can use data attributes for inserting icons
+[data-icon]:before
+  font-family: 'arkicons'
+  content: attr(data-icon)
+  speak: none
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+
+.arkicon-star
+.arkicon-share
+.arkicon-salon
+.arkicon-remark
+.arkicon-remark-dash
+.arkicon-pin-on
+.arkicon-pin-off
+.arkicon-list
+.arkicon-layout
+.arkicon-layout.vertical
+.arkicon-layout-vertical
+.arkicon-helper
+.arkicon-fullscreen
+.arkicon-comment
+.arkicon-bookmark
+.arkicon-back
+.arkicon-annotation
+.arkicon-annotation-bold
+  font-family: 'arkicons'
+  color: #7e8282
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+
+.arkicon-star:before
+  font-size: 1.125em
+  content: "\e000"
+
+.arkicon-share:before
+  content: "\e001"
+
+.arkicon-salon:before
+  font-size: 1.1875em
+  content: "\e002"
+
+.arkicon-remark:before
+  content: "\e003"
+
+.arkicon-remark-dash:before
+  content: "\e004"
+
+.arkicon-pin-on:before
+  content: "\e005"
+
+.arkicon-pin-off:before
+  content: "\e006"
+
+.arkicon-list:before
+  font-size: 13px
+  content: "\e007"
+
+.arkicon-layout:before
+  content: "\e009"
+
+.arkicon-layout.vertical:before
+.arkicon-layout-vertical:before
+  content: "\e008"
+
+.arkicon-helper:before
+  content: "\e00a"
+
+.arkicon-fullscreen:before
+  content: "\e00b"
+
+.arkicon-comment:before
+  content: "\e00c"
+
+.arkicon-bookmark:before
+  font-size: 1.125em
+  content: "\e00d"
+
+.arkicon-back:before
+  font-size: 0.875em
+  content: "\e00e"
+
+.arkicon-annotation:before
+  font-size: 1.1875em
+  content: "\e00f"
+
+.arkicon-annotation-bold:before
+  content: "\e010"
