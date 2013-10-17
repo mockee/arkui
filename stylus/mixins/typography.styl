@@ -1,0 +1,53 @@
+// Hiragino Sans GB (冬青黑体简体中文)
+// Mac OS X included regular(W3) and bold(W6) two weights since 10.6
+
+// STHeiti (华文黑体)
+// STHeitiSC-Thin added in iOS 7. http://d.pr/f/Y3jb
+
+// Microsoft YaHei (微软雅黑)
+// A OpenType font with ClearType support
+// Designer: Founder Group
+// Hinting: Monotype Corporation
+
+// http://en.wikipedia.org/wiki/WenQuanYi
+// http://wenq.org/wqy2/index.cgi?FontGuide
+// WenQuanYi Micro Hei (文泉驿微米黑)
+// WenQuanYi Micro Hei Mono (文泉驿等宽微米黑)
+// WenQuanYi Zen Hei (文泉驿正黑)
+// WenQuanYi Zen Hei Mono (文泉驿等宽正黑)
+// WenQuanYi Zen Hei Sharp (文泉驿点阵正黑) [ingore]
+
+// Apple LiGothic Medium / LiGothicMed (蘋果儷中黑)
+// SimHei (中易黑体)
+
+// STKaiti (华文楷体)
+// AR PL UKai (AR PL 中楷)
+// AR PL KaitiM GB (文鼎 PL 简中楷)
+// KaiTi (楷体)
+// Kaiti_GB2312 (中易楷体)
+// TW-Kai (全字庫正楷體)
+
+$HeiFont = "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei Mono", LiGothicMed, SimHei
+$KaiFont = STKaiti, "AR PL UKai", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW-Kai"
+$EnFont = "Helvetica Neue", Helvetica, "Lucida Grande", "Luxi Sans", Arial, sans-serif
+$CodeFont = Consolas, "Liberation Mono", "BitStream Vera Sans Mono", CourierNewPS-BoldMT, "Courier New", Courier, monospace
+
+word-wrap()
+  word-wrap: arguments
+  -ms-word-wrap: arguments
+
+text-justify()
+  text-justify: arguments 
+  -ms-text-justify: arguments
+
+hyphens()
+  -webkit-hyphens: arguments
+  -moz-hyphens: arguments
+  -ms-hyphens: arguments
+  hyphens: arguments
+
+ellipsis(no-wrap = true)
+  if no-wrap
+    white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
