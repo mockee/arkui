@@ -1,7 +1,11 @@
 /**
- * Copied from nib:
- * https://github.com/visionmedia/nib/blob/master/lib/nib/vendor.styl
+ * Refer to Nib:
+ * repo: https://github.com/visionmedia/nib/blob/master/lib/nib/vendor.styl
+ * commit: 626921de2d8ee83adb727325f4a7043bb82a42cf
  */
+
+is-comma-list()
+  return match('\), \(', ''+arguments)
 
 literal-join(string, literals)
   result = unquote('')
