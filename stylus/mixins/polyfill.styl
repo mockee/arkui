@@ -16,3 +16,8 @@ inline-block()
 opacity(alpha)
   opacity: alpha
   filter: unquote('alpha(opacity=' + alpha*100 +  ')');
+
+background-image-uri(img)
+  background-image: uri(img)
+  *background-image: url(img)
+  _background-image: url(img)
