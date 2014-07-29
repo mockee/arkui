@@ -1,0 +1,148 @@
+@import "../../stylus/index"
+
+body
+  padding: 15px 0
+
+.inner
+.container
+  width: 936px
+  margin: 0 auto
+
+nav.navbar
+  top: 0
+  left: 0
+  z-index: 10
+  position: fixed
+  _position: absolute
+  height: 28px
+  width: 100%
+  background-color: #000
+  li
+    inline-block()
+    vertical-align: top
+  a
+    color: $grayLight
+    inline-block()
+    vertical-align: top
+    padding: 5px 20px
+    &.active
+    &.active:hover
+      cursor: default
+      font-size: 14px
+      color: #fff
+      padding: 10px 20px
+      _padding: 5px 20px
+      background-color: $linkColor
+    &:hover
+      color: #fff
+      background: none
+
+header
+  padding: 40px 0 30px 20px
+  margin-bottom: 40px
+  background-color: #f7f7f7
+  border-bottom: 1px solid #eee
+
+header h1
+  font-weight: bold
+  font-size: 60px
+  line-height: 1
+
+header h2
+  font-weight: normal
+  color: $grayLight
+  font-size: 16px
+
+.container
+  min-width: 700px
+
+.mod
+  margin-bottom: 30px
+  .hd
+    margin-bottom: 15px
+    h3
+      color: black
+      font-size: 20px
+
+  section .hd h3
+    color: $gray
+    font-size: 18px
+
+code
+  font: normal $baseFontSize $monoFontFamily
+  border: 1px solid #eaeaea
+  background #f8f8f8
+  padding: 1px 5px
+  margin: 0 2px
+  border-radius: 3px
+  white-space: nowrap
+
+blockquote
+  padding: 10px 15px
+  background-color: #f7f7f7
+
+// docs table
+.table-zebra tbody tr:nth-child(odd) td
+.table-zebra tbody tr:nth-child(odd) th
+  background-color: #f9f9f9
+
+.nav-store .inner
+  width: 93%
+
+#typography p
+  font-size: 13px
+
+#lists
+  margin: 20px 0 -40px
+  .list-col li
+    color: #ddd
+    height: 134px
+    line-height: @height
+    text-align: center
+    background-color: #f3f3f3
+    &:hover
+      background-color: $grayLighter
+
+  .list-col2 li
+    font-size: 28px
+
+  .list-col5 li
+    font-size: 16px
+
+#lists code
+  position: relative
+  top: -2px
+  margin-left: 10px
+  font-size: $baseFontSize
+
+// Layouts
+.col-right
+  float: right
+
+.layout
+  .main
+  .inner
+    width: 13 * ($column + $gutter)
+    margin: 0 auto
+  .main
+    margin-bottom: 20px
+  header
+    margin-bottom: 30px
+    background-color: #ebebe4
+  footer
+    padding: 0 10px
+
+.layout .col
+  height: 34px
+  position: relative
+  background-color: #f3f3f3
+  &:hover
+    background-color: $grayLighter
+  code
+    position: absolute
+    top: 6px
+    left: 4px
+
+// Components
+.pagination
+  padding-top: 0

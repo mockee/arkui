@@ -1,0 +1,313 @@
+extends ../layout
+
+block nav
+  - page_name = 'index'
+
+block content
+  - btn_th = ['Button', 'Input', 'class=""', 'Description']
+  - menu_items = [{ name: 'Typography', anchor: 'typography'}]
+  - menu_items.push({ name: 'Buttons', anchor: 'buttons'})
+  - menu_items.push({ name: 'Tables', anchor: 'tables'})
+  - menu_items.push({ name: 'Forms', anchor: 'forms'})
+  - nav_mitems = [{ name: 'Code', url: 'https://github.com/mockee/arkui' }]
+  - nav_mitems.push({ name: 'Issues', url: 'https://github.com/mockee/arkui/issues' })
+
+  - tags = ['小说', '悬疑', '推理', '神秘主义', '密室', '本格', '重口味', '成长']
+  - list_items = ['UNITAS', 'World Literature', 'Guokr Reading', 'Scientific American', 'World Architecture', 'Douban Read']
+
+  - btns = [{ text: '购买', sel: 'btn', desc: 'Standard button in Store' }]
+  - btns.push({ text: '试读', sel: 'btn btn-minor', desc: 'Usually appears with standard button' })
+  - btns.push({ text: '分享', sel: 'btn btn-info', desc: 'Info button for the particular entry' })
+  - btns.push({ text: '阅读', sel: 'btn btn-read', desc: 'Douban Read exclusive button' })
+  - btns.push({ text: '发布', sel: 'btn btn-green', desc: 'Sage green button, used for submission' })
+  - btns.push({ text: '确定', sel: 'btn btn-disabled', desc: 'Disabled button' })
+  - btns.push({ text: '取消', sel: 'btn-link', desc: 'Link-like button' })
+
+  - btn_sizes = [{ text: '普通', sel: 'btn' }]
+  - btn_sizes.push({ text: '大尺寸', sel: 'btn-large' })
+  - btn_sizes.push({ text: '超大尺寸', sel: 'btn-huge' })
+
+  - table_th = ['Name', 'Class', 'Description']
+  - table_td = [{ name: 'Default', sel: 'None', desc: 'No styles, just columns and rows' }]
+  - table_td.push({ name: 'Basic', sel: '.table', desc: 'Only horizontal lines between rows' })
+  - table_td.push({ name: 'Bordered', sel: '.table-bordered', desc: 'Rounds corners and adds outer border' })
+  - table_td.push({ name: 'Striped', sel: '.table-striped', desc: 'Adds background color to odd rows' })
+
+  .mod#nav
+    nav.nav.nav-store
+      .inner
+        ul.items
+          each item in menu_items
+            li
+              a(href='#' + item.anchor)= item.name
+        ul.items.items-minor
+          each mitem in nav_mitems
+            li
+              a(href=mitem.url, target="_blank")= mitem.name
+
+  .mod#typography
+    .hd
+      h3 Typography
+    .bd
+      .main
+        .col.col9
+          p
+            code= '<p>'
+            b Bold
+            = ' text works for '
+            em emphasis
+            code= '<em>emphasis</em>'
+            = ', but it is harder to read.'
+            code= '</p>'
+          p
+            code= '<p>'
+            = 'Type set in '
+            i italics
+            code= '<i>italics</i>'
+            | can lose legibility.
+            | Word shapes shift as sans serif fonts slant over to one side.
+            | Spacing within and between letters gets lost as serif fonts
+            | tend to get narrower and closer together in their italic form.
+            | Readers have to slow down to process the word shapes.
+            code= '</p>'
+        .col.col4.col-right
+          blockquote
+            h1 h1 / 一级标题
+            h2 h2 / 二级标题
+            h3 h3 / 三级标题
+
+      #lists.main
+        article.col.col9
+          section
+            .hd
+              h3 Two Column List
+                code .list-col2
+            .bd
+              ul.list-col.list-col2
+                each i in [1,2,3,4]
+                  li 134 x 297
+          section
+            .hd
+              h3 Five Column List
+                code .list-col5
+            .bd
+              ul.list-col.list-col5
+                each i in [1,2,3,4,5]
+                  li cover
+
+        aside.col.col4.col-right
+          section
+            .hd
+              h3 Tags
+                code .tags
+            .bd
+              ul.tags
+                each tag in tags
+                  li
+                    a(href='#')= tag
+          section
+            .hd
+              h3 List
+                code .list
+            .bd
+              ul.list
+                each item in list_items
+                  li= item
+          section
+            .hd
+              h3 Lined List
+                code .list-lined
+            .bd
+              ul.list-lined
+                each item in list_items
+                  li= item
+
+  .mod#buttons
+    .hd
+      h3 Buttons
+    .bd
+      .main
+        article.col.col9
+          table.table.table-bordered.table-zebra
+            thead
+              tr
+                each th in btn_th
+                  th= th 
+            tbody
+              each btn in btns
+                tr
+                  td
+                    button(class=btn.sel)= btn.text
+                  td
+                    input(class=btn.sel
+                      type='button'
+                      value= btn.text)
+                  td
+                    code= btn.sel
+                  td= btn.desc
+        aside.col.col4.col-right
+          .button-sizes
+            table.table.table-bordered.table-zebra
+              thead
+                tr
+                  th Button
+                  th class=""
+                tbody
+                  each btn_size in btn_sizes
+                    tr
+                      td
+                        button.btn.btn-green(class=btn_size.sel)
+                          = btn_size.text
+                      td
+                        code= btn_size.sel
+
+  .mod#tables
+    .hd
+      h3 Tables
+    .bd
+      .main
+        article.col.col9
+          table.table.table-striped
+            thead
+              tr
+                each th in table_th
+                  th= th
+            tbody
+              each td in table_td
+                tr
+                  td= td.name
+                  td
+                    code= td.sel
+                  td= td.desc
+        aside.col.col4.col-right
+
+  .mod#forms
+    .hd
+      h3 Forms
+    .bd
+      .main
+        article.col.col9
+          section
+            .hd
+              h3 Horizontal Form
+            .bd
+              form.form-horizontal
+                fieldset
+                  .field-group
+                    label.field-label Text input
+                    .fields-inline
+                      input.col1(type='text', value='col1')
+                      input.col3.focused(type='text', value='col3 focused')
+                      span.help-inline Multi inline input
+                  .field-group
+                    label.field-label Radios
+                    .fields-inline
+                      each val in [1,2,3]
+                        if val === 1
+                          label.radio
+                            input(type='radio', name='radios', checked)
+                            = 'item' + val
+                        else
+                          label.radio
+                            input(type='radio', name='radios')
+                            = 'item' + val
+                  .field-group
+                    label.field-label Checkboxs
+                    .fields-inline
+                      each val in [1,2,3,4,5]
+                        if val === 1
+                          label.checkbox
+                            input(type='checkbox', checked)
+                            = 'item' + val
+                        else
+                          label.checkbox
+                            input(type='checkbox')
+                            = 'item' + val
+                  .field-group
+                    label.field-label Disabled input
+                    .fields
+                      input.col5.disabled(
+                        type='text'
+                        value='col5 disabled'
+                        disabled)
+                      p.help-block Block help text for current field
+                  .field-group
+                    label.field-label Multi-input
+                    .fields.multi-input
+                      each i in [1,2]
+                        input.col5(type='text', value='col5')
+                        span.help-inline Inline help text
+                  .field-group
+                    label.field-label File input
+                    .fields
+                      input(type='file')
+                  .field-group
+                    label.field-label Select list
+                    .fields
+                      select.col3
+                        each i in [1,2,3,4,5]
+                          option
+                            = 'list item' + i
+                  .field-group
+                    label.field-label Textarea
+                    .fields
+                      textarea.col5(rows='5', placeholder='placeholder')
+                  .field-group
+                    label.field-label Checkbox
+                    .fields
+                      label.checkbox
+                        input(type='checkbox')
+                        = 'I agree to the Douban Terms of Service'
+                  .form-actions
+                    button.btn.btn-minor.btn-large(type='cancel') 保存退出
+                    button.btn.btn-read.btn-large(type='submit') 下一步
+
+        aside.col.col4.col-right
+          section
+            .hd
+              h3 Vertical Form
+            .bd
+              form.form-vertical
+                fieldset
+                  .field-group
+                    label.field-label Text input
+                    .fields
+                      input.col3(type='text', value='col3')
+                  .field-group
+                    label.field-label Input with error
+                    .fields
+                      input.col3.error(type='text'
+                        value='col3 error')
+                      span.help-inline.error Error info
+                  .field-group
+                    label.field-label Disabled input
+                    .fields
+                      input.col3.disabled(
+                        type='text'
+                        value='col3 disabled'
+                        disabled)
+                  .field-group
+                    label.field-label Readonly input
+                    .fields
+                      input.col3.readonly(
+                        type='text'
+                        value='col3 readonly'
+                        readonly)
+                  .field-group
+                    label.field-label Url
+                    .fields
+                      input.col3(type='url'
+                      placeholder='douban.com')
+                  .field-group
+                    label.field-label Email
+                    .fields
+                      input.col3(type='email'
+                        placeholder='mockee@douban.com')
+                  .field-group
+                    label.field-label Date
+                    .fields
+                      input.col3(type='date'
+                        placeholder='Month/Day/Year')
+                  .form-actions
+                    button.btn.btn-large(type='submit') 保存修改
+                    button.btn.btn-minor.btn-large(type='cancel') 取消

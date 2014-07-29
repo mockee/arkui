@@ -1,0 +1,33 @@
+extends ../layout
+
+block nav
+  - page_name = 'layouts'
+
+block content
+  .mod
+    .hd
+      h3 Basic Grid Example
+    .bd.layout
+      each i in [0,1,2,3,4,5,6,7]
+        - l = 'col' + (i + 3)
+        - r = 'col' + (10 - i)
+        .main
+          .col(class= l)
+            code= '.col.' + l
+          .col.col-right(class= r)
+            code= '.col.' + r
+
+  .mod
+    .hd
+      h3 Common Ground
+    .bd.layout
+      .main
+        article.col.col9
+          code article.col.col9
+        aside.col.col4.col-right
+          code aside.col.col4
+      .main
+        nav.col.col3
+          code nav.col.col3
+        article.col.col10.col-right
+          code article.col.col10
