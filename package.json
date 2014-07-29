@@ -1,12 +1,39 @@
 {
-    "name": "arkui-docs-builder",
-    "version": "0.0.2",
-    "description": "Arkui docs builder.",
-    "dependencies": {
-        "stylus": "~0.36.0",
-        "jade": "~0.34.1"
-    },
-    "engines": {
-        "node": "~0.10.15"
-    }
+  "name": "Arkui",
+  "version": "0.1.0",
+  "description": "Basic UI components for Douban Read.",
+  "devDependencies": {
+  "grunt": "~0.4.2",
+  "grunt-contrib-watch": "~0.6.1",
+  "grunt-contrib-jshint": "~0.6.3",
+  "grunt-contrib-jade": "~0.11.0",
+  "grunt-contrib-stylus": "~0.16.0",
+  "grunt-contrib-uglify": "~0.4.0",
+  "grunt-browserify": "~2.1.0",
+  "grunt-contrib-connect": "~0.7.1",
+  "grunt-contrib-copy": "~0.5.0",
+  "grunt-string-replace": "~0.2.7",
+  "stylus": "~0.45.1",
+  "fluidity": "~0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mockee/arkui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mockee/arkui/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE"
+  },
+  "engines": {
+    "node": "~0.10.15"
+  },
+  "keywords": [
+    "css",
+    "style",
+    "frontend",
+    "components"
+  ]
 }
