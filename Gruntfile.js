@@ -16,20 +16,6 @@ module.exports = function(grunt) {
         }
       }
     }
-  , copy: {
-      main: {
-        files: [
-          {
-            expand: true
-          , src: [
-              'index.html'
-            , 'img/'
-            ]
-          , dest: 'pages/'
-          }
-        ]
-      }
-    }
   , watch: {
       options: {
         livereload: true
@@ -63,5 +49,4 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy')
 
   grunt.registerTask('default', ['stylus', 'jade'])
-  grunt.registerTask('docs', ['default', 'copy'])
 }
