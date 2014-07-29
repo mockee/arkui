@@ -1,10 +1,10 @@
-iconic-font(name='arkicons', path='/fonts/')
+iconic-font(name='arkicons', path='/fonts/', fontFamily='arkicons')
   @font-face
     // IE9 Compat modes: eot
     // IE6-IE8: #iefix
     // Safari, Android, iOS: ttf
     // Legacy iOS: svg
-    font-family: 'arkicons'
+    font-family: fontFamily
     src: url(path + name + '.eot')
     src: url(path + name + '.eot?#iefix') format('embedded-opentype'),
       url(path + name + '.woff') format('woff'),
@@ -23,3 +23,4 @@ iconic-font(name='arkicons', path='/fonts/')
     text-transform: none
     line-height: 1
     -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
